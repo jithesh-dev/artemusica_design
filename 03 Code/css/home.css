@@ -1,0 +1,130 @@
+.header-bg {
+  background: url("../assets/svg/bg-stripe.svg") no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+  background-position-x: right;
+}
+
+header {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% auto;
+      grid-template-columns: 40% auto;
+  -ms-grid-rows: 250px auto 70px;
+      grid-template-rows: 250px auto 70px;
+      grid-template-areas: "logo illustration" "text illustration" "mainnav mainnav";
+}
+
+header .logo {
+  width: 400px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+header .hero-text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: text;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+header .hero-text h1 {
+  line-height: 0.9;
+}
+
+header .hero-text .btn {
+  margin: 30px 0;
+  padding: 20px 50px;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+header #hero-illustration {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: illustration;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+header .signup-circle {
+  grid-area: signup;
+  width: 100px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+header .main-nav {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: mainnav;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.intro {
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro h6 {
+  font-weight: 300;
+}
+
+.intro h6 span {
+  font-weight: 800;
+  font-style: italic;
+}
+
+.divider-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.divider-text .underline-pretext {
+  width: 100%;
+  height: 120px;
+  border-bottom: 1px solid #b8b8b8;
+}
+
+.divider-text img {
+  width: 500px;
+}
+
+.courses-section {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  grid-gap: 30px 30px;
+  -ms-grid-columns: 350px 350px 350px;
+      grid-template-columns: 350px 350px 350px;
+}
+
+.courses-section .test {
+  height: 250px;
+  border-radius: 5px;
+  background-color: #3f3d56;
+}
+/*# sourceMappingURL=home.css.map */

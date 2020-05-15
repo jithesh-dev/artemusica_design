@@ -1,0 +1,163 @@
+/* open-sans-300 - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/open-sans-v17-latin-300.eot");
+  /* IE9 Compat Modes */
+  src: local("Open Sans Light"), local("OpenSans-Light"), url("../assets/fonts/open-sans-v17-latin-300.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans-v17-latin-300.woff2") format("woff2"), url("../assets/fonts/open-sans-v17-latin-300.woff") format("woff"), url("../assets/fonts/open-sans-v17-latin-300.ttf") format("truetype"), url("../assets/fonts/open-sans-v17-latin-300.svg#OpenSans") format("svg");
+  /* Legacy iOS */
+}
+
+/* open-sans-regular - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/open-sans-v17-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../assets/fonts/open-sans-v17-latin-regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans-v17-latin-regular.woff2") format("woff2"), url("../assets/fonts/open-sans-v17-latin-regular.woff") format("woff"), url("../assets/fonts/open-sans-v17-latin-regular.ttf") format("truetype"), url("../assets/fonts/open-sans-v17-latin-regular.svg#OpenSans") format("svg");
+  /* Legacy iOS */
+}
+
+/* open-sans-600 - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/fonts/open-sans-v17-latin-600.eot");
+  /* IE9 Compat Modes */
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url("../assets/fonts/open-sans-v17-latin-600.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans-v17-latin-600.woff2") format("woff2"), url("../assets/fonts/open-sans-v17-latin-600.woff") format("woff"), url("../assets/fonts/open-sans-v17-latin-600.ttf") format("truetype"), url("../assets/fonts/open-sans-v17-latin-600.svg#OpenSans") format("svg");
+  /* Legacy iOS */
+}
+
+/* open-sans-700 - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/open-sans-v17-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("../assets/fonts/open-sans-v17-latin-700.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans-v17-latin-700.woff2") format("woff2"), url("../assets/fonts/open-sans-v17-latin-700.woff") format("woff"), url("../assets/fonts/open-sans-v17-latin-700.ttf") format("truetype"), url("../assets/fonts/open-sans-v17-latin-700.svg#OpenSans") format("svg");
+  /* Legacy iOS */
+}
+
+/* open-sans-800 - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../assets/fonts/open-sans-v17-latin-800.eot");
+  /* IE9 Compat Modes */
+  src: local("Open Sans ExtraBold"), local("OpenSans-ExtraBold"), url("../assets/fonts/open-sans-v17-latin-800.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans-v17-latin-800.woff2") format("woff2"), url("../assets/fonts/open-sans-v17-latin-800.woff") format("woff"), url("../assets/fonts/open-sans-v17-latin-800.ttf") format("truetype"), url("../assets/fonts/open-sans-v17-latin-800.svg#OpenSans") format("svg");
+  /* Legacy iOS */
+}
+
+/* Border Box */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Common Styles */
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #3f3d56;
+}
+
+a {
+  text-decoration: none;
+  color: #3f3d56;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Typography */
+h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* btn */
+.btn {
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  background-color: #ff6584;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+}
+
+/* Containers */
+.container {
+  width: 100%;
+  padding: 0 4vw;
+}
+
+.mini-container {
+  width: 100%;
+  padding: 0px 20vw;
+}
+
+/* Nav */
+nav li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+nav a {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* General */
+.pad-tb-15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.pad-tb-25 {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.pad-tb-35 {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.pad-tb-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+/*# sourceMappingURL=style.css.map */
