@@ -4,22 +4,14 @@ $clr-text-dark: #3f3d56;
 $clr-text-light: #fff;
 $clr-bg-accent: #e6e6e6;
 
-.header-bg {
-  background: url("../assets/svg/bg-stripe.svg") no-repeat;
-  background-size: cover;
-  background-position-y: bottom;
-  background-position-x: right;
-}
-
 header {
-  height: 100vh;
+  height: 90vh;
   display: grid;
   grid-template-columns: 40% auto;
-  grid-template-rows: 250px auto 70px;
+  grid-template-rows: 250px auto;
   grid-template-areas:
     "logo illustration"
-    "text illustration"
-    "mainnav mainnav";
+    "text illustration";
 
   .logo {
     width: 400px;
@@ -51,10 +43,12 @@ header {
     align-self: center;
     justify-self: end;
   }
-  .main-nav {
-    grid-area: mainnav;
-    align-self: center;
-  }
+}
+
+.main-nav {
+  display: inline-flex;
+  width: 100%;
+  background-color: $clr-bg-accent;
 }
 
 .intro {

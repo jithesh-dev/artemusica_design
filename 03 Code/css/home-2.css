@@ -1,19 +1,12 @@
-.header-bg {
-  background: url("../assets/svg/bg-stripe.svg") no-repeat;
-  background-size: cover;
-  background-position-y: bottom;
-  background-position-x: right;
-}
-
 header {
-  height: 100vh;
+  height: 90vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 40% auto;
       grid-template-columns: 40% auto;
-  -ms-grid-rows: 250px auto 70px;
-      grid-template-rows: 250px auto 70px;
-      grid-template-areas: "logo illustration" "text illustration" "mainnav mainnav";
+  -ms-grid-rows: 250px auto;
+      grid-template-rows: 250px auto;
+      grid-template-areas: "logo illustration" "text illustration";
 }
 
 header .logo {
@@ -66,14 +59,12 @@ header .signup-circle {
       justify-self: end;
 }
 
-header .main-nav {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: mainnav;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.main-nav {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: #e6e6e6;
 }
 
 .intro {
@@ -246,4 +237,4 @@ header .main-nav {
 .divider-test h3 {
   font-weight: 800;
 }
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=home-2.css.map */

@@ -161,13 +161,16 @@ h6 {
 /* Containers */
 .container {
   width: 100%;
-  padding: 0 4vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
 }
 .mini-container {
   width: 100%;
   padding: 0px 20vw;
 }
-
+.btn-container {
+  display: inline-flex;
+}
 /* Nav */
 nav {
   li {
@@ -199,4 +202,38 @@ nav {
 .pad-tb-50 {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.pad-tb-150 {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+// Common
+footer {
+  margin-top: 100px;
+  background-color: $clr-text-dark;
+  color: $clr-text-light;
+  height: 300px;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .footer-info {
+    align-self: center;
+    background: url("../assets/svg/arte_logo_bg.svg") no-repeat;
+    background-size: contain;
+    background-position: center 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    .btn-container {
+      margin-top: 20px;
+      a {
+        margin-right: 30px;
+      }
+    }
+  }
 }
