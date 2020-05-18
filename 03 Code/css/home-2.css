@@ -1,12 +1,20 @@
+.circle {
+  border-radius: 50%;
+}
+
+.yellow {
+  background-color: #ffca63;
+}
+
 header {
   height: 90vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40% auto;
-      grid-template-columns: 40% auto;
+  -ms-grid-columns: 50% auto;
+      grid-template-columns: 50% auto;
   -ms-grid-rows: 250px auto;
       grid-template-rows: 250px auto;
-      grid-template-areas: "logo illustration" "text illustration";
+      grid-template-areas: "logo illustration" "text illustration";
 }
 
 header .logo {
@@ -30,6 +38,7 @@ header .hero-text {
 
 header .hero-text h1 {
   line-height: 0.9;
+  font-size: 3rem;
 }
 
 header .hero-text .btn {
@@ -60,15 +69,18 @@ header .signup-circle {
 }
 
 .main-nav {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
   width: 100%;
   background-color: #e6e6e6;
 }
 
+.main-nav li a {
+  font-weight: 400;
+}
+
 .intro {
-  height: 500px;
+  height: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,15 +88,39 @@ header .signup-circle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
-.intro h6 {
+.intro #intro-text {
+  position: relative;
   font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 
-.intro h6 span {
+.intro #intro-text span {
   font-weight: 800;
   font-style: italic;
+}
+
+.intro #intro-text ::before {
+  position: absolute;
+  z-index: -1;
+  top: -45px;
+  left: -40px;
+  content: "";
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background-color: #ff6584;
+}
+
+.intro .circle {
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  height: 40px;
+  width: 40px;
 }
 
 .divider-text {
@@ -106,34 +142,98 @@ header .signup-circle {
   font-weight: 800;
 }
 
-.courses-section {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.sec-title-container {
+  position: relative;
+}
+
+.sec-title-container .title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 1.8rem;
+}
+
+.sec-title-container .title span {
+  font-size: .5rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  letter-spacing: .05rem;
+  margin-right: 10px;
+  color: #ff6584;
+}
+
+.sec-title-container .title-back-text {
+  text-transform: uppercase;
+  color: #f1f1f1;
+  color: #3f3d5629;
+  line-height: 4.5rem;
+  display: inline-block;
+  letter-spacing: .2rem;
+  font-size: 6rem;
+}
+
+.courses-sec {
+  margin: 20px auto;
+}
+
+.courses-sec .courses-con {
+  position: relative;
+  padding: 20px;
+}
+
+.courses-sec .courses-con #courses-svg {
+  position: absolute;
+  top: -100px;
+  left: -8vw;
+  stroke: #e6e6e6;
+}
+
+.courses-sec .courses-con #courses-svg .line {
+  stroke: #cfcfcf;
+  fill: none;
+}
+
+.courses-sec .courses-con #courses-svg .l1 {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.courses-sec .courses-con #courses-svg .l2 {
+  -webkit-transform: translateX(8vw);
+          transform: translateX(8vw);
+}
+
+.courses-sec .courses-con #courses-tiles {
+  width: 100%;
+  margin: 100px auto;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.courses-section .courses-container {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 30px 30px;
-  -ms-grid-columns: 350px 350px 350px;
-      grid-template-columns: 350px 350px 350px;
-}
-
-.courses-section .courses-container .test {
-  height: 250px;
-  border-radius: 5px;
+.courses-sec .courses-con #courses-tiles .course-tile {
+  height: 200px;
+  width: 100%;
+  max-width: 300px;
   background-color: #3f3d56;
+  border-radius: 5px;
+  margin: 7px;
 }
 
-.courses-section .btn-container {
-  margin: 20px 0;
+.courses-sec .courses-con .btn-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -141,6 +241,7 @@ header .signup-circle {
 
 .what-section .what-item-container {
   margin-bottom: 100px;
+  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,54 +288,33 @@ header .signup-circle {
 }
 
 .about-section {
+  background-color: green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
-.about-section .abt-img-container {
-  border: 1px solid #e6e6e6;
-  max-width: 350px;
+.about-section .about-container {
+  background-color: blue;
+  width: 70%;
 }
 
-.about-section .abt-img-container img {
-  -webkit-transform: translate(20px, 20px);
-          transform: translate(20px, 20px);
+.about-section .about-container .about-text {
+  position: relative;
 }
 
-.about-section .abt-txt-container {
-  width: 500px;
-  height: 300px;
-  padding: 20px;
-  -ms-flex-item-align: center;
-      align-self: center;
-  border: 1px solid #e6e6e6;
-  border-left: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.divider-test {
-  display: inline-block;
-}
-
-.divider-test .underline-pretext {
-  width: 100%;
-  border-bottom: 1px solid #b8b8b8;
-}
-
-.divider-test img {
-  width: 500px;
-}
-
-.divider-test h3 {
-  font-weight: 800;
+.about-section .about-container .about-text ::before {
+  position: absolute;
+  z-index: -1;
+  top: -45px;
+  left: -40px;
+  content: "";
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background-color: #ff6584;
 }
 /*# sourceMappingURL=home-2.css.map */

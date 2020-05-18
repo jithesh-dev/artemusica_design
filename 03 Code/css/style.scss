@@ -168,8 +168,14 @@ h6 {
   width: 100%;
   padding: 0px 20vw;
 }
+
+.semi-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 8vw;
+}
 .btn-container {
-  display: inline-flex;
+  display: flex;
 }
 /* Nav */
 nav {
@@ -203,7 +209,10 @@ nav {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-
+.pad-tb-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
 .pad-tb-150 {
   padding-top: 150px;
   padding-bottom: 150px;
