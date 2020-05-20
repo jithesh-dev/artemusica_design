@@ -92,7 +92,9 @@
 
 $clr-primary: #ffca63;
 $clr-accent: #ff6584;
+$clr-accent-dark: #f3607d;
 $clr-text-dark: #3f3d56;
+$clr-text-darker: #37354e;
 $clr-text-light: #fff;
 $clr-bg-accent: #e6e6e6;
 
@@ -131,12 +133,12 @@ ul {
 /* Typography */
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 4vw;
   font-weight: 800;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2vw;
   font-weight: 600;
 }
 
@@ -156,6 +158,91 @@ h6 {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 0.8rem;
+  border: none;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: $clr-accent-dark;
+}
+
+// Form Elements
+// colors
+$input-background: rgba(57, 63, 84, 0.8);
+$input-text-inactive: #7881a1;
+$input-text-active: #bfd2ff;
+
+// gradient animation
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 30px auto;
+  border-radius: 5px;
+  padding: 1.4rem 2rem 1.6rem;
+  padding: 10px 10px;
+  background-color: $clr-text-darker;
+
+  input {
+    border-style: none;
+    background: transparent;
+    outline: none;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 999;
+    height: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-position: 0% 0%;
+    background: linear-gradient(
+      to right,
+      #b294ff,
+      #57e6e6,
+      #feffb8,
+      #57e6e6,
+      #b294ff,
+      #57e6e6
+    );
+    background-size: 500% auto;
+    animation: gradient 3s linear infinite;
+  }
+
+  .form-control {
+    flex-grow: 1;
+    color: $input-text-active;
+    font-size: 1rem;
+    line-height: 2.4rem;
+    vertical-align: middle;
+    &::-webkit-input-placeholder {
+      color: $input-text-inactive;
+    }
+  }
+  button {
+    color: $input-text-inactive;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    vertical-align: middle;
+    transition: color 0.25s;
+    &:hover {
+      color: $input-text-active;
+    }
+  }
 }
 
 /* Containers */

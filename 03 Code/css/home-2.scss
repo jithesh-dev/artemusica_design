@@ -6,22 +6,22 @@ $clr-bg-accent: #e6e6e6;
 $clr-bg-accent2: #3f3d5629;
 
 // Common
-.circle{
+.circle {
   border-radius: 50%;
 }
-.yellow{
+.yellow {
   background-color: $clr-primary;
 }
 
 header {
-  height: 90vh;
+  height: 90vmin;
   display: grid;
   grid-template-columns: 50% auto;
   grid-template-rows: 250px auto;
   grid-template-areas:
     "logo illustration"
     "text illustration";
-
+  // position: relative;
   .logo {
     width: 400px;
     grid-area: logo;
@@ -33,7 +33,8 @@ header {
 
     h1 {
       line-height: 0.9;
-      font-size: 3rem;
+      // font-size: 4vw;
+      // font-size: 3rem;
     }
 
     .btn {
@@ -47,12 +48,15 @@ header {
     grid-area: illustration;
     align-self: center;
   }
-  .signup-circle {
-    grid-area: signup;
-    width: 100px;
-    align-self: center;
-    justify-self: end;
-  }
+  // .signup-circle {
+  //   position: absolute;
+  //   right: 4vw;
+  //   top: 10px;
+  //   // grid-area: signup;
+  //   width: 100px;
+  //   height: 100px;
+  //   background-color: $clr-accent;
+  // }
 }
 
 .main-nav {
@@ -63,7 +67,7 @@ header {
 
   width: 100%;
   background-color: $clr-bg-accent;
-  li a{
+  li a {
     font-weight: 400;
   }
 }
@@ -84,7 +88,7 @@ header {
       font-weight: 800;
       font-style: italic;
     }
-    ::before{
+    ::before {
       position: absolute;
       z-index: -1;
       top: -45px;
@@ -96,104 +100,86 @@ header {
       background-color: $clr-accent;
     }
   }
-  .circle{
+  .circle {
     position: absolute;
     bottom: 0;
     right: 20%;
     height: 40px;
     width: 40px;
   }
-  
 }
 
-.divider-text {
-  display: flex;
-
-  .underline-pretext {
-    width: 100%;
-
-    border-bottom: 1px solid #b8b8b8;
-  }
-  img {
-    width: 500px;
-  }
-  h3 {
-    font-weight: 800;
-  }
-}
-
-.sec-title-container{
+.sec-title-container {
   position: relative;
-  
-  .title{
+  margin-bottom: 100px;
+  padding: 10px;
+  .title {
     font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: .3rem;
+    letter-spacing: 0.3rem;
     display: inline-flex;
     align-items: center;
     position: absolute;
-    top: 1.8rem;
-    span{
-      font-size: .5rem;
+    top: 50%;
+    span {
+      font-size: 0.5rem;
       transform: rotate(-90deg);
-      letter-spacing: .05rem;
+      letter-spacing: 0.05rem;
       margin-right: 10px;
       color: $clr-accent;
     }
   }
-  .title-back-text{
+  .title-back-text {
     text-transform: uppercase;
-    color: #f1f1f1;
     color: $clr-bg-accent2;
-    line-height: 4.5rem;
+    line-height: 100%;
     display: inline-block;
-    letter-spacing: .2rem;
-    font-size: 6rem;
+    letter-spacing: 0.2rem;
+    font-size: 9vw;
   }
 }
 
-.courses-sec{
+.courses-sec {
   margin: 20px auto;
   // height: 500px;
-  .courses-con{
+  .courses-con {
     position: relative;
-    padding: 20px;
-    #courses-svg{
+    // padding: 20px;
+    #courses-svg {
       position: absolute;
-      top:-100px;
+      top: -100px;
       left: -8vw;
       stroke: $clr-bg-accent;
-      .line{
-        stroke:rgb(207, 207, 207);
-        fill:none;
+      .line {
+        stroke: rgb(207, 207, 207);
+        fill: none;
       }
-      .l1{
+      .l1 {
         transform: translateY(100px);
       }
-      .l2{
+      .l2 {
         transform: translateX(8vw);
       }
     }
 
-    
-
-    #courses-tiles{
+    #courses-tiles {
       width: 100%;
+      max-width: 950px;
       margin: 100px auto;
       margin-bottom: 40px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      .course-tile{
+      .course-tile {
         height: 200px;
-        width:100%;
+        width: 100%;
         max-width: 300px;
         background-color: $clr-text-dark;
         border-radius: 5px;
         margin: 7px;
       }
     }
-    .btn-container{
+    .btn-container {
       justify-content: center;
     }
   }
@@ -205,7 +191,7 @@ header {
     margin-bottom: 100px;
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     img {
       width: 300px;
     }
@@ -236,24 +222,141 @@ header {
   }
 }
 
-.about-section{
-  background-color: green;
+.about-section {
+  // background-color: green;
   display: flex;
   justify-content: flex-start;
-  .about-container{
-    background-color: blue;
-    width: 70%;
-    .about-text{
+
+  .about-container {
+    background-color: $clr-bg-accent;
+    width: 60%;
+    position: relative;
+    margin: 0;
+    z-index: -2;
+    #about-svg {
+      position: absolute;
+      top: -345px;
+      stroke: $clr-bg-accent2;
+      stroke-width: 2px;
+    }
+    .about-text {
       position: relative;
-      ::before{
+
+      margin: 100px 0px;
+
+      border: 1px solid $clr-bg-accent2;
+      border-right: none;
+      padding: 40px;
+      h3 {
+        text-transform: uppercase;
+      }
+      h6 {
+        margin-bottom: 50px;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+      }
+      p {
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+        letter-spacing: 0.02rem;
+      }
+      &:before {
         position: absolute;
         z-index: -1;
         top: -45px;
-        left: -40px;
+        left: -130px;
         content: "";
-        width: 170px;
-        height: 170px;
+        width: 350px;
+        height: 350px;
         border-radius: 50%;
+        background-color: $clr-accent;
+      }
+    }
+    .circle {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      right: -130px;
+      top: 150px;
+    }
+    .abt-img-container {
+      position: absolute;
+      bottom: 50%;
+      transform: translateY(50%);
+      right: -150px;
+      border: 1px solid $clr-bg-accent2;
+      img {
+        width: 300px;
+        transform: translate(-20px, 20px);
+      }
+    }
+  }
+}
+
+.testimonials-section {
+  .t-container {
+    max-width: 800px;
+    margin: 150px auto;
+    .t-slide {
+      display: grid;
+      position: relative;
+      grid-template-areas:
+        "pic stars"
+        "pic text";
+      column-gap: 50px;
+      .t-user-pic {
+        height: 100px;
+        width: 100px;
+        background: url("../img/anju-profile.jpg") no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        grid-area: pic;
+      }
+      .t-text {
+        grid-area: text;
+      }
+      .t-stars {
+        grid-area: stars;
+        margin-left: 100px;
+        svg {
+          height: 18px;
+        }
+        .star {
+          display: block;
+          height: 18px;
+          width: 18px;
+        }
+        .filled {
+          fill: $clr-primary;
+        }
+        .empty {
+          fill: #fdf1ca;
+        }
+      }
+      .t-counter {
+        color: $clr-bg-accent2;
+        position: absolute;
+        font-size: 10rem;
+        z-index: -1;
+        font-style: italic;
+        top: -50px;
+        left: 15%;
+      }
+    }
+    .slider-nav {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+
+      .t-nav {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: $clr-text-dark;
+        margin: 5px;
+        cursor: pointer;
+      }
+      .filled {
         background-color: $clr-accent;
       }
     }

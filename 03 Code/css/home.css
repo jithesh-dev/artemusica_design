@@ -13,7 +13,7 @@ header {
       grid-template-columns: 40% auto;
   -ms-grid-rows: 250px auto 70px;
       grid-template-rows: 250px auto 70px;
-      grid-template-areas: "logo illustration" "text illustration" "mainnav mainnav";
+      grid-template-areas: "logo illustration" "text illustration" "mainnav mainnav";
 }
 
 header .logo {

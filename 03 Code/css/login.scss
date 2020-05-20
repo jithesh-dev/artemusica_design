@@ -1,0 +1,73 @@
+$clr-primary: #ffca63;
+$clr-accent: #ff6584;
+$clr-text-dark: #3f3d56;
+$clr-text-darker: #37354e;
+$clr-text-light: #fff;
+$clr-bg-accent: #e6e6e6;
+
+body {
+  // font-size: calc(12px + 1vw);
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: auto 40%;
+  overflow: hidden;
+  // align-content: center;
+  .info {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    line-height: 4rem;
+    position: relative;
+    .circles {
+      position: absolute;
+      z-index: -1;
+      width: 300px;
+      left: 50px;
+      top: -100px;
+    }
+    .welcome {
+      font-weight: 400;
+      letter-spacing: -3px;
+
+      .arte {
+        font-weight: 900;
+      }
+      .musica {
+        font-weight: 900;
+        color: $clr-primary;
+      }
+    }
+    .sub-text {
+      font-weight: 400;
+      color: $clr-text-dark;
+    }
+    #hero-illustration {
+      max-width: 500px;
+      margin-top: 30px;
+      justify-self: center;
+    }
+  }
+  .content {
+    background-color: $clr-text-dark;
+    background-image: url("../assets/svg/login-crown.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $clr-text-light;
+    .l-container {
+      width: 70%;
+      max-width: 550px;
+      .l-title {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+    }
+  }
+}

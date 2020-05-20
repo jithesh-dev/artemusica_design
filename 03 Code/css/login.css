@@ -1,0 +1,84 @@
+main {
+  height: 100vh;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 40%;
+      grid-template-columns: auto 40%;
+  overflow: hidden;
+}
+
+main .info {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 4rem;
+  position: relative;
+}
+
+main .info .circles {
+  position: absolute;
+  z-index: -1;
+  width: 300px;
+  left: 50px;
+  top: -100px;
+}
+
+main .info .welcome {
+  font-weight: 400;
+  letter-spacing: -3px;
+}
+
+main .info .welcome .arte {
+  font-weight: 900;
+}
+
+main .info .welcome .musica {
+  font-weight: 900;
+  color: #ffca63;
+}
+
+main .info .sub-text {
+  font-weight: 400;
+  color: #3f3d56;
+}
+
+main .info #hero-illustration {
+  max-width: 500px;
+  margin-top: 30px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+main .content {
+  background-color: #3f3d56;
+  background-image: url("../assets/svg/login-crown.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+main .content .l-container {
+  width: 70%;
+  max-width: 550px;
+}
+
+main .content .l-container .l-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+/*# sourceMappingURL=login.css.map */

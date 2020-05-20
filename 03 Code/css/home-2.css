@@ -7,14 +7,14 @@
 }
 
 header {
-  height: 90vh;
+  height: 90vmin;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% auto;
       grid-template-columns: 50% auto;
   -ms-grid-rows: 250px auto;
       grid-template-rows: 250px auto;
-      grid-template-areas: "logo illustration" "text illustration";
+      grid-template-areas: "logo illustration" "text illustration";
 }
 
 header .logo {
@@ -29,16 +29,14 @@ header .logo {
 
 header .hero-text {
   -ms-grid-row: 2;
-  -ms-grid-column: 1;
+  -ms-grid-column: 2;
   grid-area: text;
   -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
       align-self: start;
 }
 
 header .hero-text h1 {
   line-height: 0.9;
-  font-size: 3rem;
 }
 
 header .hero-text .btn {
@@ -56,16 +54,6 @@ header #hero-illustration {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-}
-
-header .signup-circle {
-  grid-area: signup;
-  width: 100px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: end;
-      justify-self: end;
 }
 
 .main-nav {
@@ -123,33 +111,16 @@ header .signup-circle {
   width: 40px;
 }
 
-.divider-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.divider-text .underline-pretext {
-  width: 100%;
-  border-bottom: 1px solid #b8b8b8;
-}
-
-.divider-text img {
-  width: 500px;
-}
-
-.divider-text h3 {
-  font-weight: 800;
-}
-
 .sec-title-container {
   position: relative;
+  margin-bottom: 100px;
+  padding: 10px;
 }
 
 .sec-title-container .title {
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -157,26 +128,25 @@ header .signup-circle {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: 1.8rem;
+  top: 50%;
 }
 
 .sec-title-container .title span {
-  font-size: .5rem;
+  font-size: 0.5rem;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  letter-spacing: .05rem;
+  letter-spacing: 0.05rem;
   margin-right: 10px;
   color: #ff6584;
 }
 
 .sec-title-container .title-back-text {
   text-transform: uppercase;
-  color: #f1f1f1;
   color: #3f3d5629;
-  line-height: 4.5rem;
+  line-height: 100%;
   display: inline-block;
-  letter-spacing: .2rem;
-  font-size: 6rem;
+  letter-spacing: 0.2rem;
+  font-size: 9vw;
 }
 
 .courses-sec {
@@ -185,7 +155,6 @@ header .signup-circle {
 
 .courses-sec .courses-con {
   position: relative;
-  padding: 20px;
 }
 
 .courses-sec .courses-con #courses-svg {
@@ -212,6 +181,7 @@ header .signup-circle {
 
 .courses-sec .courses-con #courses-tiles {
   width: 100%;
+  max-width: 950px;
   margin: 100px auto;
   margin-bottom: 40px;
   display: -webkit-box;
@@ -245,9 +215,9 @@ header .signup-circle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .what-section .what-item-container img {
@@ -288,7 +258,6 @@ header .signup-circle {
 }
 
 .about-section {
-  background-color: green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -298,23 +267,166 @@ header .signup-circle {
 }
 
 .about-section .about-container {
-  background-color: blue;
-  width: 70%;
+  background-color: #e6e6e6;
+  width: 60%;
+  position: relative;
+  margin: 0;
+  z-index: -2;
+}
+
+.about-section .about-container #about-svg {
+  position: absolute;
+  top: -345px;
+  stroke: #3f3d5629;
+  stroke-width: 2px;
 }
 
 .about-section .about-container .about-text {
   position: relative;
+  margin: 100px 0px;
+  border: 1px solid #3f3d5629;
+  border-right: none;
+  padding: 40px;
 }
 
-.about-section .about-container .about-text ::before {
+.about-section .about-container .about-text h3 {
+  text-transform: uppercase;
+}
+
+.about-section .about-container .about-text h6 {
+  margin-bottom: 50px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.about-section .about-container .about-text p {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  letter-spacing: 0.02rem;
+}
+
+.about-section .about-container .about-text:before {
   position: absolute;
   z-index: -1;
   top: -45px;
-  left: -40px;
+  left: -130px;
   content: "";
-  width: 170px;
-  height: 170px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
+  background-color: #ff6584;
+}
+
+.about-section .about-container .circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: -130px;
+  top: 150px;
+}
+
+.about-section .about-container .abt-img-container {
+  position: absolute;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  right: -150px;
+  border: 1px solid #3f3d5629;
+}
+
+.about-section .about-container .abt-img-container img {
+  width: 300px;
+  -webkit-transform: translate(-20px, 20px);
+          transform: translate(-20px, 20px);
+}
+
+.testimonials-section .t-container {
+  max-width: 800px;
+  margin: 150px auto;
+}
+
+.testimonials-section .t-container .t-slide {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+      grid-template-areas: "pic stars" "pic text";
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+}
+
+.testimonials-section .t-container .t-slide .t-user-pic {
+  height: 100px;
+  width: 100px;
+  background: url("../img/anju-profile.jpg") no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: pic;
+}
+
+.testimonials-section .t-container .t-slide .t-text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: text;
+}
+
+.testimonials-section .t-container .t-slide .t-stars {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: stars;
+  margin-left: 100px;
+}
+
+.testimonials-section .t-container .t-slide .t-stars svg {
+  height: 18px;
+}
+
+.testimonials-section .t-container .t-slide .t-stars .star {
+  display: block;
+  height: 18px;
+  width: 18px;
+}
+
+.testimonials-section .t-container .t-slide .t-stars .filled {
+  fill: #ffca63;
+}
+
+.testimonials-section .t-container .t-slide .t-stars .empty {
+  fill: #fdf1ca;
+}
+
+.testimonials-section .t-container .t-slide .t-counter {
+  color: #3f3d5629;
+  position: absolute;
+  font-size: 10rem;
+  z-index: -1;
+  font-style: italic;
+  top: -50px;
+  left: 15%;
+}
+
+.testimonials-section .t-container .slider-nav {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.testimonials-section .t-container .slider-nav .t-nav {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #3f3d56;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.testimonials-section .t-container .slider-nav .filled {
   background-color: #ff6584;
 }
 /*# sourceMappingURL=home-2.css.map */
