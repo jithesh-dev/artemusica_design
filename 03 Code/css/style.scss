@@ -242,6 +242,12 @@ $input-text-active: #bfd2ff;
     &:hover {
       color: $input-text-active;
     }
+    &:active {
+      border: none;
+    }
+    &:focus {
+      border: none;
+    }
   }
 }
 
@@ -303,6 +309,10 @@ nav {
 .pad-tb-150 {
   padding-top: 150px;
   padding-bottom: 150px;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 // Common

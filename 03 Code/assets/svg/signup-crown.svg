@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 584 138.8" style="enable-background:new 0 0 584 138.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#signup-crown_1_);}
+	.st1{fill:url(#SVGID_1_);}
+</style>
+<linearGradient id="signup-crown_1_" gradientUnits="userSpaceOnUse" x1="-1330.7157" y1="6.7735" x2="-1330.7157" y2="6.7735" gradientTransform="matrix(584 0 0 138.775 777722 -939.9963)">
+	<stop  offset="0" style="stop-color:#FEC962"/>
+	<stop  offset="1" style="stop-color:#FF6584"/>
+</linearGradient>
+<path id="signup-crown_3_" class="st0" d="M584,0"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-1331.6367" y1="7.5418" x2="-1330.421" y2="6.147" gradientTransform="matrix(584 0 0 138.775 777722 -939.9963)">
+	<stop  offset="0" style="stop-color:#FEC962"/>
+	<stop  offset="1" style="stop-color:#FF6584"/>
+</linearGradient>
+<path class="st1" d="M0-1.6v130.1c3.5,2.7,25.7,16.9,74.8-5.8c53.8-24.9,66.6-63.9,110.3-51.8s52,62.6,128.6,67.3
+	c6.9,0.4,13.9,0.6,21.1,0.6c72.7,0,249.2-64.1,249.2-64.1V-1.6"/>
+</svg>

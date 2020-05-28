@@ -34,6 +34,34 @@ input {
   outline: none;
 }
 
+button {
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* btn */
+.btn {
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  background-color: #ff6584;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+  border: none;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #3f3d56;
+}
+
 @-webkit-keyframes gradient {
   0% {
     background-position: 0 0;
@@ -99,5 +127,82 @@ input {
 
 .form-group .form-control::-webkit-input-placeholder {
   color: #7881a1;
+}
+
+.form-group button {
+  color: #7881a1;
+  position: absolute;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+  background: none;
+  border: none;
+  right: 20px;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  color: #bfd2ff;
+}
+
+.hide {
+  display: none;
+}
+
+.search-container {
+  position: absolute;
+  top: 10%;
+  right: 50px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  font-size: 25px;
+  height: 80px;
+  width: 80px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.search-container a {
+  color: #353535;
+}
+
+.search-container .inp-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 0;
+  border-top-left-radius: calc(40px);
+  border-bottom-left-radius: calc(40px);
+  z-index: -1;
+  background-color: #fff;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.search-container .inp-wrapper input {
+  color: #353535;
+  width: 100%;
+  margin: 20px 50px;
+  font-size: 1.5rem;
+}
+
+.full {
+  width: 500px !important;
 }
 /*# sourceMappingURL=test.css.map */
